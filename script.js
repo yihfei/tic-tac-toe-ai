@@ -113,6 +113,12 @@ function minimax(player) {
                 bestScore = move.score;
                 bestMove = move;
             }
+            // introduce variability
+            if (move.score == bestScore) {
+                if (Math.random() > 0.7) {
+                    bestMove = move;
+                }
+            }
         }
     }
 
@@ -122,6 +128,12 @@ function minimax(player) {
             if (move.score < bestScore) {
                 bestScore = move.score;
                 bestMove = move;
+            }
+
+            if (move.score == bestScore) {
+                if (Math.random() > 0.7) {
+                    bestMove = move;
+                }
             }
         }
     }
