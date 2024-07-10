@@ -46,12 +46,12 @@ const gameBoard = (() => {
         return board.every(cell => cell != '');
     }
 
-    return {setBoard, clearBoard, checkWin};
+    return {setBoard, clearBoard, clearEntireBoard, getAvailableCells, checkWin};
 
 })
 
-const Player = (sign) => {
-    const sign = sign;
+const Player = (playerSign) => {
+    const sign = playerSign;
     const getSign = () => sign;
     
     return {getSign};
